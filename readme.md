@@ -1,3 +1,3 @@
 # Huffman Coding
 
-### [encyrption](huffmanCodingEncryption.cpp)
+#### for the encryption of [encryption](huffmanCodingEncryption.cpp)
