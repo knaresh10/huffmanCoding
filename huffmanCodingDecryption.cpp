@@ -18,7 +18,6 @@ unordered_map<char, string> getHuffmanCodes(ifstream& inputFile) {
 	inputFile.read(marker, 7);
 	char numSym;
 	inputFile.read(&numSym, 1);
-
 	for (int i = 0; i < numSym; i++) {
 		char symbol;
 		char codeLength;
@@ -68,6 +67,7 @@ string getEncodedData(ifstream& inputFile) {
 	}
 	encodedData.resize(encodedDataLength);
 	return encodedData;
+
 }
 
 void decompress(string& encodedData, HuffmanNode *root) {
@@ -79,6 +79,7 @@ void decompress(string& encodedData, HuffmanNode *root) {
 		} else {
 			currNode = currNode->right;
 		}
+
 		if (currNode->left == NULL && currNode->right == NULL) {
 			decodedData += currNode->data;
 			currNode = root;
@@ -87,6 +88,7 @@ void decompress(string& encodedData, HuffmanNode *root) {
 	ofstream decodedFile("output.txt");
 	decodedFile << decodedData;
 	decodedFile.close();
+	cout << "decoded data is stored in output.txt file\n";
 }
 
 int main() {
@@ -96,4 +98,5 @@ int main() {
 	string encodedData = getEncodedData(inputFile);
 	inputFile.close();
 	decompress(encodedData, huffmanTree);
+	cout << "decryption is done";
 }
