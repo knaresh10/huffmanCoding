@@ -52,8 +52,8 @@ This will read the encoded binary data from `output.bin`, perform Huffman coding
 
 ## File Structure
 
-- `huffmanCodingEncryption.cpp`[File](huffmanCodingEncryption.cpp): C++ program for Huffman coding encryption.
-- `huffmanCodingDecryption.cpp`[File](huffmanCodingDecryption.cpp): C++ program for Huffman coding decryption.
+- [`huffmanCodingEncryption.cpp`](huffmanCodingEncryption.cpp): C++ program for Huffman coding encryption.
+- [`huffmanCodingDecryption.cpp`](huffmanCodingDecryption.cpp): C++ program for Huffman coding decryption.
 
 ## Example
 
